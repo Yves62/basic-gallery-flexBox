@@ -1,0 +1,82 @@
+*, ::before, ::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+.container{
+    width: 95%;
+    margin: 30px auto;
+    height: fit-content;
+    padding-bottom: 50px;
+}
+
+.container h1{
+    padding: 60px 0px;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+.container h1::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: crimson;
+}
+
+.container .gallery{
+    width: 100%;
+    margin : 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    gap: 25px;
+}
+.container .gallery .box{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container .gallery .box .box-top{ 
+    height: 80%;
+    width: 100%;
+    position: relative;
+    flex-grow: 0;
+}
+.container .gallery .box .box-top img{ 
+    height: 100%;
+    width: 100%;
+}
+.container .gallery .box .box-top div{ 
+    height: fit-content;
+    width: fit-content;
+    padding: 3px;
+    position: absolute;
+    top : 5px;
+    left : 5px;
+    background-color: rgb(18, 84, 228);
+    color: white;
+    border-radius: 5px;
+}
+.container .gallery .box .box-bottom{
+    height: 20%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 10px;
+    font-weight: 800;
+}
